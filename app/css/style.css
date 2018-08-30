@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:hover {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url("../fonts/ProximaNova-Bold.eot");
+  src: url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Intro-italic';
+  src: url("../fonts/subset-Intro-Black-Italic.eot");
+  src: url("../fonts/subset-Intro-Black-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-Intro-Black-Italic.woff2") format("woff2"), url("../fonts/subset-Intro-Black-Italic.woff") format("woff"), url("../fonts/subset-Intro-Black-Italic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Intro-regular';
+  src: url("../fonts/subset-Intro-Regular.eot");
+  src: url("../fonts/subset-Intro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-Intro-Regular.woff2") format("woff2"), url("../fonts/subset-Intro-Regular.woff") format("woff"), url("../fonts/subset-Intro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  height: 100vh; }
+
+.header {
+  padding: 15px 0 11px; }
+  .header-title {
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Proxima Nova Regular"; }
+    .header-title-info {
+      margin-left: 35px;
+      font-size: 13px; }
+    .header-title .header-logo {
+      text-transform: uppercase;
+      font-size: 30px;
+      letter-spacing: -0.005;
+      color: #000000; }
+    .header-title span {
+      display: block; }
+  .header-callback {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Proxima Nova Bold"; }
+    .header-callback .number {
+      font-size: 35px;
+      margin-right: 45px; }
+    .header-callback button {
+      font-size: 13px;
+      color: #ffffff;
+      background-color: #fd6c4a; }
+
+.gallery {
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+  height: 100%; }
+  .gallery .gallery-img-wrapper .gallery-navbar {
+    padding: 9px 0;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .gallery .gallery-img-wrapper .gallery-navbar ul {
+      width: 100%;
+      font-family: "Proxima Nova Bold";
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase; }
+      .gallery .gallery-img-wrapper .gallery-navbar ul li {
+        text-align: center;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+      .gallery .gallery-img-wrapper .gallery-navbar ul li + li {
+        border-left: 1px solid #ffffff; }
+  .gallery .gallery-img-wrapper img {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 1; }
+  .gallery .gallery-img-wrapper .gallery-info-block {
+    position: absolute;
+    z-index: 10; }
+    .gallery .gallery-img-wrapper .gallery-info-block .room-name {
+      padding: 25px;
+      background-color: red;
+      -webkit-transform: skew(-20deg);
+              transform: skew(-20deg); }
+      .gallery .gallery-img-wrapper .gallery-info-block .room-name span {
+        display: block;
+        -webkit-transform: skew(20deg);
+                transform: skew(20deg); }
