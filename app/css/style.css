@@ -99,110 +99,169 @@ body {
     .header-callback button {
       font-size: 13px;
       color: #ffffff;
-      background-color: #fd6c4a; }
+      background: -webkit-gradient(linear, left bottom, left top, from(#ff4f58), to(#fd7048));
+      background: linear-gradient(0deg, #ff4f58 0%, #fd7048 100%); }
 
 .gallery {
   max-width: 100vw;
   overflow: hidden;
   position: relative;
-  height: 100%; }
-  .gallery .gallery-img-wrapper .gallery-navbar {
-    padding: 9px 0;
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.3); }
-    .gallery .gallery-img-wrapper .gallery-navbar ul {
-      width: 100%;
-      font-family: "Proxima Nova Bold";
-      font-size: 14px;
-      color: #ffffff;
-      text-transform: uppercase; }
-      .gallery .gallery-img-wrapper .gallery-navbar ul li {
-        text-align: center;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1; }
-      .gallery .gallery-img-wrapper .gallery-navbar ul li + li {
-        border-left: 1px solid #ffffff; }
-  .gallery .gallery-img-wrapper img {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    z-index: 1; }
-  .gallery .gallery-img-wrapper .gallery-info-block-container {
+  min-height: 90%; }
+  .gallery .gallery-img-wrapper {
     position: relative; }
-  .gallery .gallery-img-wrapper .gallery-info-block {
-    position: absolute;
-    z-index: 10;
-    margin-top: 15%;
-    left: 0;
-    -webkit-transform: skew(-20deg);
-            transform: skew(-20deg);
-    padding: 35px;
-    border-left: 3px solid #ffffff; }
-    .gallery .gallery-img-wrapper .gallery-info-block .gallery-title {
-      padding: 0.27em;
-      background-color: rgba(255, 255, 255, 0.7);
-      font-family: "Intro-regular";
-      font-size: 90px;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-      font-weight: 900;
-      -webkit-box-shadow: -4px 4px 16px 0px rgba(0, 0, 0, 0.3);
-              box-shadow: -4px 4px 16px 0px rgba(0, 0, 0, 0.3);
-      margin-bottom: 10px; }
-      .gallery .gallery-img-wrapper .gallery-info-block .gallery-title span {
-        display: block;
-        -webkit-transform: skew(20deg);
-                transform: skew(20deg); }
-    .gallery .gallery-img-wrapper .gallery-info-block .room-info {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .gallery .gallery-img-wrapper .gallery-info-block .room-info span {
-        display: block; }
-      .gallery .gallery-img-wrapper .gallery-info-block .room-info .room-name {
-        position: relative;
-        font-size: 36px;
-        font-family: "Intro-italic";
-        padding: 11px 65px 20px;
-        background-color: rgba(255, 255, 255, 0.7); }
-        .gallery .gallery-img-wrapper .gallery-info-block .room-info .room-name hr {
-          position: absolute;
-          left: 10%;
-          right: 10%;
-          bottom: 10%;
-          margin: 0;
-          margin-top: 5px;
-          border: 3px solid #000000; }
-        .gallery .gallery-img-wrapper .gallery-info-block .room-info .room-name span {
-          -webkit-transform: skew(20deg);
-                  transform: skew(20deg); }
-      .gallery .gallery-img-wrapper .gallery-info-block .room-info .room-price {
-        padding: 5px 15px 3px;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: flex-end;
+    .gallery .gallery-img-wrapper .gallery-navbar {
+      padding: 9px 0;
+      width: 100%;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.3); }
+      .gallery .gallery-img-wrapper .gallery-navbar ul {
+        width: 100%;
+        font-family: "Proxima Nova Bold";
+        font-size: 14px;
         color: #ffffff;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-        background: -webkit-gradient(linear, left top, right top, from(#2aeb2a), to(#007500));
-        background: linear-gradient(90deg, #2aeb2a 0%, #007500 100%);
-        /* w3c */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2aeb2a', endColorstr='#007500',GradientType=1 );
-        -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
-                box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
-        font-family: "Intro-regular";
-        margin-left: 8px; }
-        .gallery .gallery-img-wrapper .gallery-info-block .room-info .room-price .price {
-          margin: 0 20px;
-          font-size: 45px;
-          font-weight: 900; }
-        .gallery .gallery-img-wrapper .gallery-info-block .room-info .room-price span {
-          -webkit-transform: skew(20deg);
-                  transform: skew(20deg);
-          font-size: 16px; }
+        text-transform: uppercase; }
+        .gallery .gallery-img-wrapper .gallery-navbar ul li {
+          text-align: center;
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; }
+        .gallery .gallery-img-wrapper .gallery-navbar ul li + li {
+          border-left: 1px solid #ffffff; }
+    .gallery .gallery-img-wrapper > img {
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      z-index: 1; }
+    .gallery .gallery-img-wrapper .gallery-info-block-container {
+      position: relative; }
+    .gallery .gallery-img-wrapper .gallery-info-block {
+      position: absolute;
+      z-index: 10;
+      margin-top: 4%;
+      left: 0; }
+      .gallery .gallery-img-wrapper .gallery-info-block .pricement {
+        -webkit-transform: skew(-20deg);
+                transform: skew(-20deg);
+        padding: 0 35px;
+        border-left: 3px solid #ffffff; }
+        .gallery .gallery-img-wrapper .gallery-info-block .pricement .gallery-title {
+          padding: 0.27em;
+          background-color: rgba(255, 255, 255, 0.7);
+          font-family: "Intro-regular";
+          font-size: 90px;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+          font-weight: 900;
+          -webkit-box-shadow: -4px 4px 16px 0px rgba(0, 0, 0, 0.3);
+                  box-shadow: -4px 4px 16px 0px rgba(0, 0, 0, 0.3);
+          margin-bottom: 10px; }
+          .gallery .gallery-img-wrapper .gallery-info-block .pricement .gallery-title span {
+            display: block;
+            -webkit-transform: skew(20deg);
+                    transform: skew(20deg); }
+        .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info span {
+            display: block; }
+          .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-name {
+            position: relative;
+            font-size: 36px;
+            font-family: "Intro-italic";
+            padding: 11px 65px 20px;
+            background-color: rgba(255, 255, 255, 0.7); }
+            .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-name hr {
+              position: absolute;
+              left: 10%;
+              right: 10%;
+              bottom: 10%;
+              margin: 0;
+              margin-top: 5px;
+              border: 3px solid #000000; }
+            .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-name span {
+              -webkit-transform: skew(20deg);
+                      transform: skew(20deg); }
+          .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price {
+            padding: 5px 15px 3px;
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            color: #ffffff;
+            height: -webkit-min-content;
+            height: -moz-min-content;
+            height: min-content;
+            background: -webkit-gradient(linear, left top, right top, from(#2aeb2a), to(#007500));
+            background: linear-gradient(90deg, #2aeb2a 0%, #007500 100%);
+            /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2aeb2a', endColorstr='#007500', GradientType=1);
+            -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+            font-family: "Intro-regular";
+            margin-left: 8px; }
+            .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price .price {
+              margin: 0 20px;
+              font-size: 45px;
+              font-weight: 900; }
+            .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price span {
+              -webkit-transform: skew(20deg);
+                      transform: skew(20deg);
+              font-size: 16px; }
+    .gallery .gallery-img-wrapper .ideas {
+      max-width: 50%;
+      font-family: "Proxima Nova Bold";
+      font-size: 19px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-top: 25px; }
+      .gallery .gallery-img-wrapper .ideas p {
+        margin-bottom: 25px; }
+      .gallery .gallery-img-wrapper .ideas button {
+        color: #ffffff;
+        background: -webkit-gradient(linear, left bottom, left top, from(#ff4f58), to(#fd7048));
+        background: linear-gradient(0deg, #ff4f58 0%, #fd7048 100%);
+        border: 2px solid #ffffff;
+        border-radius: .2em;
+        padding: 10px 17px;
+        font-size: 23px; }
+    .gallery .gallery-img-wrapper .controls {
+      margin-top: 50px;
+      color: #ffffff;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .gallery .gallery-img-wrapper .controls .arrow {
+        font-size: 35px; }
+      .gallery .gallery-img-wrapper .controls .dots {
+        margin: 0 40px; }
+        .gallery .gallery-img-wrapper .controls .dots .dot {
+          width: 15px;
+          height: 15px;
+          border: 3px solid #ffffff;
+          border-radius: 100%;
+          background-color: transparent; }
+          .gallery .gallery-img-wrapper .controls .dots .dot + .dot {
+            margin-left: 15px; }
+        .gallery .gallery-img-wrapper .controls .dots .dot.active {
+          background-color: #fff; }
+    .gallery .gallery-img-wrapper .our-activities {
+      left: 0;
+      right: 0;
+      z-index: 150;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      bottom: 0;
+      padding: 20px 0; }
+    .gallery .gallery-img-wrapper .activiti {
+      text-align: center; }
+      .gallery .gallery-img-wrapper .activiti-img {
+        margin-bottom: 20px; }
+      .gallery .gallery-img-wrapper .activiti-title {
+        font-family: "Proxima Nova Bold";
+        font-size: 22px;
+        margin-bottom: 12px; }
+      .gallery .gallery-img-wrapper .activiti-text {
+        font-family: "Proxima Nova Regular"; }
