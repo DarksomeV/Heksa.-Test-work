@@ -23,7 +23,7 @@ body{
     .header-logo{
       text-transform: uppercase;
       font-size: 30px;
-      letter-spacing: -0.005;
+      letter-spacing: -0.005em;
       color: #000000;
     }
 
@@ -41,6 +41,13 @@ body{
       font-size: 35px;
       margin-right: 45px;
     }
+
+    button{
+      font-size: 13px;
+      color: #ffffff;
+      background: $btn-color;
+    }
+
     @media (max-width: 991px) {
       .number{
         font-size: 30px;
@@ -53,12 +60,16 @@ body{
         margin-right: 15px;
       }
     }
-
-    button{
-      font-size: 13px;
-      color: #ffffff;
-      background: $btn-color;
+    @media (max-width: 576px){
+      .number{
+        display: none;
+      }
+      button{
+        display: none;
+      }
     }
+
+
   }
 }
 
@@ -160,6 +171,16 @@ body{
             font-size: 60px;
           }
         }
+        @media (max-width: 576px) {
+          .gallery-title{
+            font-size: 40px;
+          }
+        }
+        @media (max-width: 479px) {
+          .gallery-title{
+            font-size: 25px;
+          }
+        }
 
         .room-info {
           display: flex;
@@ -198,7 +219,6 @@ body{
           }
           @media (max-width: 991px) {
             .room-name{
-              max-width: 290px;
               font-size: 25px;
               padding: 8px 30px 10px;
 
@@ -206,13 +226,20 @@ body{
           }
           @media (max-width: 870px) {
             .room-name{
-              max-width: 290px;
               font-size: 20px;
               padding: 6px 25px 10px;
               hr {
                 border: 1px solid #000000;
                 margin-top: 2px;
               }
+            }
+          }
+          @media (max-width: 479px) {
+            .room-name{
+              font-size: 15px;
+              width: 145px;
+              padding: 8px 11px 5px;
+              justify-content: center;
             }
           }
 
@@ -240,8 +267,6 @@ body{
           }
           @media (max-width: 1200px) {
             .room-price{
-              max-width: 158px;
-
               .price {
                 margin: 0 13px;
               }
@@ -249,15 +274,40 @@ body{
           }
 
           @media (max-width: 991px) {
+          .room-price{
+            .price {
+              font-size: 25px;
+            }
+          }
+        }
+          @media (max-width: 479px) {
             .room-price{
-              max-width: 158px;
-
+              width: 100%;
+              padding: 5px 10px 3px;
+              justify-content: center;
+              span{
+                font-size: 10px;
+              }
               .price {
-                font-size: 25px;
+                font-size: 16px;
               }
             }
           }
+        }
 
+        @media (max-width: 479px) {
+          .room-info{
+            display: block;
+
+            .room-name{
+              width: 100%;
+            }
+
+            .room-price{
+              width: 100%;
+              margin-top: 10px;
+            }
+          }
         }
       }
       @media (max-width: 991px) {
@@ -276,6 +326,12 @@ body{
     @media (max-width: 991px) {
       .gallery-info-block{
         margin-top: 18%;
+      }
+    }
+    @media (max-width: 576px) {
+      .gallery-info-block{
+        left: 10%;
+        right: 10%;
       }
     }
 
@@ -317,14 +373,26 @@ body{
 
     @media (max-width: 767px) {
       .ideas{
-
-        p{
-
-        }
         button{
           margin-top: 15px;
           padding: 10px 20px;
           font-size: 20px;
+        }
+      }
+    }
+    @media (max-width: 576px){
+      .ideas{
+        p{
+          display: none;
+        }
+      }
+    }
+    @media (max-width: 479px){
+      .ideas{
+        button{
+          margin: 0 auto;
+          display: block;
+          margin-top: 45px;
         }
       }
     }
@@ -380,17 +448,22 @@ body{
     }
 
     @media (max-width: 767px) {
+    .controls{
+      margin-top: 20px;
+      .arrow{
+        font-size: 40px;
+      }.dots {
+         margin: 0 30px;
+         .dot {
+           width: 20px;
+           height: 20px;
+         }
+       }
+    }
+  }
+    @media (max-width: 479px) {
       .controls{
-        margin-top: 20px;
-        .arrow{
-          font-size: 40px;
-        }.dots {
-                   margin: 0 30px;
-                   .dot {
-                     width: 20px;
-                     height: 20px;
-                   }
-                 }
+        justify-content: center;
       }
     }
 
