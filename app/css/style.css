@@ -173,7 +173,8 @@ body {
             font-size: 36px;
             font-family: "Intro-italic";
             padding: 11px 65px 20px;
-            background-color: rgba(255, 255, 255, 0.7); }
+            background-color: rgba(255, 255, 255, 0.7);
+            min-width: 400px; }
             .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-name hr {
               position: absolute;
               left: 10%;
@@ -265,3 +266,21 @@ body {
         margin-bottom: 12px; }
       .gallery .gallery-img-wrapper .activiti-text {
         font-family: "Proxima Nova Regular"; }
+
+.fadein {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
