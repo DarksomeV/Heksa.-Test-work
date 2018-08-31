@@ -36,3 +36,15 @@ table {
 a:hover{
   text-decoration: none;
 }
+
+button, .btn {
+  &:focus,
+  &:active:focus,
+  &.active:focus,
+  &.focus,
+  &:active.focus,
+  &.active.focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

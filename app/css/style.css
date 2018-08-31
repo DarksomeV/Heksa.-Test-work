@@ -33,6 +33,11 @@ table {
 a:hover {
   text-decoration: none; }
 
+button:focus, button:active:focus, button.active:focus, button.focus, button:active.focus, button.active.focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
 @font-face {
   font-family: 'Proxima Nova Regular';
   src: url("../fonts/ProximaNova-Regular.eot");
@@ -61,8 +66,32 @@ a:hover {
   font-weight: normal;
   font-style: normal; }
 
-body {
-  height: 100vh; }
+@font-face {
+  font-family: 'Intro-bold';
+  src: url("../fonts/subset-Intro-Black.eot");
+  src: url("../fonts/subset-Intro-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-Intro-Black.woff2") format("woff2"), url("../fonts/subset-Intro-Black.woff") format("woff"), url("../fonts/subset-Intro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+/*------------------------------------------------------------------
+  	[Fonts]
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  	[Colors]
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  	[Sizes]
+------------------------------------------------------------------*/
+/*----------------------------------------------------------------------
+
+        Unfortunately, I do not like working with pixels, but in this layout it
+        was necessary to solve the problem quickly.
+        Perhaps in the future I will rewrite it in relative units to look more
+        adaptive and beautiful.
+
+-----------------------------------------------------------------------*/
+span {
+  display: block; }
 
 .header {
   padding: 15px 0 11px; }
@@ -83,8 +112,6 @@ body {
       font-size: 30px;
       letter-spacing: 0.02em;
       color: #000000; }
-    .header-title span {
-      display: block; }
   .header-callback {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -100,7 +127,13 @@ body {
       font-size: 13px;
       color: #ffffff;
       background: -webkit-gradient(linear, left bottom, left top, from(#ff4f58), to(#fd7048));
-      background: linear-gradient(0deg, #ff4f58 0%, #fd7048 100%); }
+      background: linear-gradient(0deg, #ff4f58 0%, #fd7048 100%);
+      -webkit-transition: font-size 1s ease-out;
+      transition: font-size 1s ease-out; }
+      .header-callback button:hover {
+        font-size: 15px;
+        background: -webkit-gradient(linear, left bottom, left top, from(#ff846b), to(#fd1d0f));
+        background: linear-gradient(0deg, #ff846b 0%, #fd1d0f 100%); }
     @media (max-width: 991px) {
       .header-callback .number {
         font-size: 30px;
@@ -111,8 +144,6 @@ body {
         margin-right: 15px; } }
     @media (max-width: 576px) {
       .header-callback .number {
-        display: none; }
-      .header-callback button {
         display: none; } }
 
 .gallery {
@@ -149,6 +180,10 @@ body {
           font-family: "Proxima Nova Bold"; }
         .gallery .gallery-img-wrapper .gallery-navbar ul li + li {
           border-left: 1px solid #ffffff; }
+        @media (max-width: 767px) {
+          .gallery .gallery-img-wrapper .gallery-navbar ul li + li {
+            border-left: none;
+            margin-top: 5px; } }
     @media (max-width: 1200px) {
       .gallery .gallery-img-wrapper .gallery-navbar {
         padding: 4px 0; } }
@@ -162,6 +197,7 @@ body {
       left: 0;
       position: absolute;
       z-index: 2;
+      width: 85%;
       top: 0;
       bottom: 0;
       height: 100%; }
@@ -184,18 +220,16 @@ body {
         padding: 0 14px;
         border-left: 3px solid #ffffff; }
         .gallery .gallery-img-wrapper .gallery-info-block .pricement .gallery-title {
-          padding: 0.15em 0.3em 0;
+          padding: 0.1em 0.2em 0.08em;
           background-color: rgba(255, 255, 255, 0.7);
-          font-family: "Intro-regular";
+          font-family: "Intro-bold";
           font-size: 90px;
-          letter-spacing: -0.02em;
           text-transform: uppercase;
           font-weight: 900;
           -webkit-box-shadow: -4px 4px 16px 0px rgba(0, 0, 0, 0.3);
                   box-shadow: -4px 4px 16px 0px rgba(0, 0, 0, 0.3);
           margin-bottom: 10px; }
           .gallery .gallery-img-wrapper .gallery-info-block .pricement .gallery-title span {
-            display: block;
             -webkit-transform: skew(18deg);
                     transform: skew(18deg); }
         @media (max-width: 1200px) {
@@ -218,8 +252,6 @@ body {
           -webkit-box-align: end;
               -ms-flex-align: end;
                   align-items: flex-end; }
-          .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info span {
-            display: block; }
           .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-name {
             position: relative;
             font-size: 36px;
@@ -276,10 +308,11 @@ body {
             -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
                     box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
             font-family: "Intro-regular";
-            margin-left: 8px; }
+            margin-left: 8px;
+            margin-bottom: 0.6em; }
             .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price .price {
               margin: 0 20px;
-              font-size: 45px;
+              font-size: 41px;
               font-weight: 900; }
             .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price span {
               -webkit-transform: skew(18deg);
@@ -297,7 +330,8 @@ body {
               padding: 5px 10px 3px;
               -webkit-box-pack: center;
                   -ms-flex-pack: center;
-                      justify-content: center; }
+                      justify-content: center;
+              margin-left: 0; }
               .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price span {
                 font-size: 10px; }
               .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-price .price {
@@ -324,14 +358,17 @@ body {
       .gallery .gallery-img-wrapper .gallery-info-block {
         left: 10%;
         right: 10%; } }
+    @media (max-width: 479px) {
+      .gallery .gallery-img-wrapper .gallery-info-block {
+        margin-top: 30%; } }
     .gallery .gallery-img-wrapper .ideas {
       max-width: 50%;
       font-family: "Proxima Nova Bold";
       font-size: 19px;
       color: #ffffff;
       text-transform: uppercase;
-      margin-top: 25px;
-      margin-left: 8%; }
+      margin-top: 22px;
+      margin-left: 4%; }
       .gallery .gallery-img-wrapper .ideas p {
         margin-bottom: 20px;
         line-height: 120%; }
@@ -342,7 +379,13 @@ body {
         border: 2px solid #ffffff;
         border-radius: .2em;
         padding: 7px 17px;
-        font-size: 23px; }
+        font-size: 23px;
+        -webkit-transition: background 1s ease-in, padding 0.3s;
+        transition: background 1s ease-in, padding 0.3s; }
+        .gallery .gallery-img-wrapper .ideas button:hover {
+          padding: 7px 23px;
+          background: -webkit-gradient(linear, left bottom, left top, from(#ff846b), to(#fd1d0f));
+          background: linear-gradient(0deg, #ff846b 0%, #fd1d0f 100%); }
     @media (max-width: 991px) {
       .gallery .gallery-img-wrapper .ideas {
         max-width: 100%;
@@ -362,31 +405,42 @@ body {
       .gallery .gallery-img-wrapper .ideas p {
         display: none; } }
     @media (max-width: 479px) {
-      .gallery .gallery-img-wrapper .ideas button {
-        margin: 0 auto;
-        display: block;
-        margin-top: 45px; } }
+      .gallery .gallery-img-wrapper .ideas {
+        margin-left: 0; }
+        .gallery .gallery-img-wrapper .ideas button {
+          font-size: 15px;
+          margin: 0 auto;
+          display: block;
+          margin-top: 45px; } }
     .gallery .gallery-img-wrapper .controls {
       margin-top: 48px;
-      margin-left: 7.5%;
+      margin-left: 3.5%;
       color: #ffffff;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
       .gallery .gallery-img-wrapper .controls .arrow {
-        font-size: 35px; }
+        font-size: 35px;
+        cursor: pointer; }
+        .gallery .gallery-img-wrapper .controls .arrow:hover {
+          font-size: 30px;
+          text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.61); }
       .gallery .gallery-img-wrapper .controls .dots {
         margin: 0 40px; }
         .gallery .gallery-img-wrapper .controls .dots .dot {
-          width: 15px;
-          height: 15px;
+          width: 18px;
+          height: 18px;
           border: 3px solid #ffffff;
           border-radius: 100%;
           background-color: transparent; }
           .gallery .gallery-img-wrapper .controls .dots .dot + .dot {
-            margin-left: 15px; }
+            margin-left: 13px; }
+          .gallery .gallery-img-wrapper .controls .dots .dot:hover {
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4); }
         .gallery .gallery-img-wrapper .controls .dots .dot.active {
-          background-color: #fff; }
+          background-color: #ffffff; }
     @media (max-width: 1200px) {
       .gallery .gallery-img-wrapper .controls {
         margin-top: 25px; } }
@@ -412,6 +466,7 @@ body {
             height: 20px; } }
     @media (max-width: 479px) {
       .gallery .gallery-img-wrapper .controls {
+        margin-left: 0;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; } }
@@ -423,11 +478,6 @@ body {
       position: absolute;
       bottom: 0;
       padding: 20px 0; }
-    @media (max-width: 991px) {
-      .gallery .gallery-img-wrapper .our-activities {
-        position: static; }
-        .gallery .gallery-img-wrapper .our-activities .activiti {
-          margin-top: 10px; } }
     .gallery .gallery-img-wrapper .activiti {
       text-align: center; }
       .gallery .gallery-img-wrapper .activiti-img {
@@ -438,7 +488,15 @@ body {
         margin-bottom: 21px; }
       .gallery .gallery-img-wrapper .activiti-text {
         font-family: "Proxima Nova Regular"; }
+    @media (max-width: 991px) {
+      .gallery .gallery-img-wrapper .our-activities {
+        position: static; }
+        .gallery .gallery-img-wrapper .our-activities .activiti {
+          margin-top: 10px; } }
 
+/*------------------------------------------------------------------
+  	[Another classes]
+------------------------------------------------------------------*/
 .fadein {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
@@ -456,6 +514,29 @@ body {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.b-circle {
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  border-radius: 50%; }
+
+.b-circle-line {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: 2px solid black;
+  border-radius: 50%; }
+
+.b-circle-line:nth-of-type(2) {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  border: 2px solid rgba(84, 0, 255, 0);
+  bottom: -3px; }
 
 @media (min-width: 1200px) {
   .container {

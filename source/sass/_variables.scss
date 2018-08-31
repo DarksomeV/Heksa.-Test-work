@@ -1,6 +1,25 @@
+/*------------------------------------------------------------------
+  	[Fonts]
+------------------------------------------------------------------*/
+
 $text-default-font: 'Proxima Nova Regular';
 $text-titles-font: 'Proxima Nova Bold';
 $big-text: 'Intro-regular';
 $big-text-italic: 'Intro-italic';
+$main-header: 'Intro-bold';
 
-$btn-color: linear-gradient(0deg, rgba(255,79,88,1) 0%, rgba(253,112,72,1) 100%);;
+/*------------------------------------------------------------------
+  	[Colors]
+------------------------------------------------------------------*/
+
+$light-color: #ffffff;
+$dark-color: #000000;
+$btn-color: linear-gradient(0deg, rgba(255,79,88,1) 0%, rgba(253,112,72,1) 100%);
+$btn-color-hover: linear-gradient(0deg, rgb(255, 132, 107) 0%, rgb(253, 29, 15) 100%);
+
+/*------------------------------------------------------------------
+  	[Sizes]
+------------------------------------------------------------------*/
+
+$angle: skew(-18deg);
+$textAngle: skew(18deg);
