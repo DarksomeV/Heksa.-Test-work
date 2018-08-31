@@ -271,6 +271,8 @@ span {
                       transform: skew(18deg); }
           @media (max-width: 1200px) {
             .gallery .gallery-img-wrapper .gallery-info-block .pricement .room-info .room-name {
+              font-size: 34px;
+              padding: 11px 47px 20px;
               max-width: 365px;
               text-align: center; } }
           @media (max-width: 991px) {
