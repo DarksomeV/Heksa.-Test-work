@@ -207,6 +207,10 @@ span {
         min-height: 450px; }
       .gallery .gallery-img-wrapper > img.layer {
         display: none; } }
+    @media (max-width: 479px) {
+      .gallery .gallery-img-wrapper > img {
+        width: 150%;
+        min-height: 400px; } }
     .gallery .gallery-img-wrapper .gallery-info-block-container {
       position: relative; }
     .gallery .gallery-img-wrapper .gallery-info-block {

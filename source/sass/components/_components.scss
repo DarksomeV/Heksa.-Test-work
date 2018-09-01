@@ -171,6 +171,12 @@ span {
         display: none;
       }
     }
+    @media (max-width: 479px) {
+      & > img {
+        width: 150%;
+        min-height: 400px;
+      }
+    }
 
     .gallery-info-block-container {
       position: relative;
